@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+
+    <style>
+    body {background-color: black;}
+    table, th, td {
+    
+    border: 1px solid black;
+    }
+    </style>
+
+<body>
+    {% block head %}{% endblock %}
+</head>
+<body style="text-align:center;">
+    {% block body %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List of all Applications</h1>
+    <table style="width: 100%">
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Roll Number</th>
+        <th>Date of Application</th>
+        <th>Preference 1</th>
+        <th>Preference 2</th>
+
+        <th>Phone Number</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Programme</th>
+        <th>Year</th>
+        <th>Branch</th>
+        <th>Travel Mode</th>
+        <th>College Equipments</th>
+        <th>Symptoms</th>
+        <th>Recent Travel Date</th>
+        <th>Description</th>
+        <th>Score</th>
+        <th>Alloted Date</th>
+      </tr>
+      {% for i in task %}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.fname}}</td>
+        <td>{{i.lname}}</td>
+        <td>{{i.r_n}}</td>
+        <td>{{i.apply_date}}</td>
+        <td>{{i.preference_1}}</td>
+        <td>{{i.preference_2}}</td>
+        <td>{{i.phone_number}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.state}}</td>
+        <td>{{i.programme}}</td>
+        <td>{{i.year}}</td>
+        <td>{{i.branch}}</td>
+        <td>{{i.travel_mode}}</td>
+        <td>{{i.cllg_equip}}</td>
+        <td>{{i.symptoms}}</td>
+        <td>{{i.rtd}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.score}}</td>
+        <td>{{i.alloted_date}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h1>Form to give score based on description.</h1>
+    <form action="/applications" , method="POST">
+      <label for="id">Id of the Application:</label><br />
+      <input type="number" id="id" name="id" /><br />
+
+      <label for="score"
+        >Score based on the description.(Should be between 0 - 10)</label
+      ><br />
+      <input type="number" id="score" name="score" value="0" /> <br />
+      <input type="submit" value="Submit" /><br />
+    </form>
+
+    <h1>Table of all available slots.</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Number of available Slots</th>
+      </tr>
+      {% for i in available_slots %}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.num_slots}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <!-- <form action="/applications" , method="POST">
+      <label for="date">Date :</label>
+      <input type="date" id="date" name="date" /><br />
+
+      <input type="submit" value="Submit" /><br />
+    </form> -->
+  </body>
+</html>

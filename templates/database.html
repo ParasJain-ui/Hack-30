@@ -1,0 +1,73 @@
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+</style>
+<table style="width: 100%">
+  <tr>
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Roll Number</th>
+    <th>Date of Application</th>
+    <th>Preference 1</th>
+    <th>Preference 2</th>
+
+    <th>Phone Number</th>
+    <th>Gender</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Programme</th>
+    <th>Year</th>
+    <th>Branch</th>
+    <th>Travel Mode</th>
+    <th>College Equipments</th>
+    <th>Symptoms</th>
+    <th>Recent Travel Date</th>
+    <th>Description</th>
+    <th>Alloted Date</th>
+  </tr>
+  {% for i in task %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.fname}}</td>
+    <td>{{i.lname}}</td>
+    <td>{{i.r_n}}</td>
+    <td>{{i.apply_date}}</td>
+    <td>{{i.preference_1}}</td>
+    <td>{{i.preference_2}}</td>
+    <td>{{i.phone_number}}</td>
+    <td>{{i.gender}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.city}}</td>
+    <td>{{i.state}}</td>
+    <td>{{i.programme}}</td>
+    <td>{{i.year}}</td>
+    <td>{{i.branch}}</td>
+    <td>{{i.travel_mode}}</td>
+    <td>{{i.cllg_equip}}</td>
+    <td>{{i.symptoms}}</td>
+    <td>{{i.rtd}}</td>
+    <td>{{i.description}}</td>
+    <td>{{i.alloted_date}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Number of available Slots</th>
+  </tr>
+  {% for i in available_slots %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.date}}</td>
+    <td>{{i.num_slots}}</td>
+  </tr>
+  {% endfor %}
+</table>

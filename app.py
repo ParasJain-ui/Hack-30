@@ -17,8 +17,8 @@ from scoreCalculator import score_calculation, allot_date
 
 
 #mentioned in report
-GOOGLE_CLIENT_ID="your google client id"
-GOOGLE_CLIENT_SECRET="your google client secrert"
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
 GOOGLE_DISCOVERY_URL = (
     "https://accounts.google.com/.well-known/openid-configuration"
 )
